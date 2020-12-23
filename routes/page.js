@@ -9,4 +9,16 @@ router.get('/', (req, res, next)=>{
     })
 })
 
+router.get('/join', (req,res, next)=> {
+    res.render('join', {
+        title: 'join'
+    })
+})
+
+router.get('/afterLogin', (req,res, next)=>{
+    res.render('afterLogin', {
+        title:'after login'
+    })
+})
+
 module.exports = router
