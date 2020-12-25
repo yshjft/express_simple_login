@@ -6,11 +6,23 @@
 </head>
 <body>
     <div>login</div>
-    <form>
-        <input type="email" placeholder="email" required autofocus></input>
-        <input type="password" placeholder="password" placeholder="password" required></input>
+    <form method='POST' action='/auth/login'>
+        <input name='email' placeholder="email" required autofocus></input>
+        <input name='password' type="password" placeholder="password" placeholder="password" required></input>
         <input type="submit" value="submit"></input>
         <a href='/join'>join</a>
     </form>
+    <div>
+        <% if(notRegistered){ %>
+            <div>
+                <%=notRegistered %>
+            </div>
+        <% } %>
+        <% if(wrongPassword){ %>
+            <div>
+                <%=wrongPassword %>
+            </div>
+        <% } %>
+    </div>
 </body>
 </html>

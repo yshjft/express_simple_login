@@ -30,6 +30,7 @@ app.use(session({
     cookie: {
         httpOnly: true,
         secure: false,
+        maxAge: 30000
     }
 }))
 app.use(flash())

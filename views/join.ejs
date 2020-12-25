@@ -13,5 +13,12 @@
         <input type="submit" value="submit"></input>
         <a href='/'>login</a>
     </form>
+    <div>
+        <% if(joinError){ %>
+          <div>
+            <%=joinError %>
+          </div>
+        <% } %>
+      </div>
 </body>
 </html>
